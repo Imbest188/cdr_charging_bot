@@ -4,6 +4,7 @@ from ftp import Ftp
 from threading import Thread
 from multiprocessing.dummy import Pool as ThreadPool
 
+
 class Processor:
     def __init__(self, ftp):
         self.work = False
@@ -15,6 +16,7 @@ class Processor:
         self.ftp = ftp
         self.func = None
         self.aborted = False
+
     def accuracyParse(self, file, arg):
         res = []
         with open('CDR/'+file+'.csv', 'r') as f:
